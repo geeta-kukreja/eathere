@@ -137,7 +137,7 @@ export default function HomePage() {
            {/* Explore Topics + Feed Layout */}
            <section className="px-2 md:px-6 py-6 lg:py-10 max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-6">
         {/* Left: Explore Topics */}
-        <aside className="w-full lg:w-64 bg-white lg:pl-6 mb-6 lg:mb-0 lg:sticky lg:top-24 flex flex-col h-fit lg:h-[calc(100vh-7rem)]">
+        <aside className="w-full lg:w-64 bg-white lg:pl-6 mb-6 lg:mb-0 lg:sticky lg:top-24 flex flex-col h-fit">
           <h4 className="text-lg font-bold mb-4 lg:mb-6 flex items-center gap-2">
             <img src={`${basePath}/icons/explore.png`} alt="Explore" className="w-5 h-5" style={{ filter: 'invert(41%) sepia(99%) saturate(749%) hue-rotate(359deg) brightness(102%) contrast(101%)' }} />
             Explore Topics
@@ -161,7 +161,7 @@ export default function HomePage() {
           </div>
 
           {/* Desktop: Vertical list */}
-          <ul className="hidden lg:block space-y-3 overflow-y-auto max-h-[calc(80vh-250px)] pr-1 text-base">
+          <ul className="hidden lg:block space-y-3 pr-1 text-base max-h-[70vh] overflow-y-auto">
             {Array.from(new Set([
               // Old topics
               "🍌 All", "📍 Guides", "💑 Date Night", "🍾 Brunch", "🍣 Sushi", "🍹 Drinks", "🧭 Resources", "🌿 Plant-Based", "🥃 Black", "🍗 Chicken", "🍔 Burger", "📦 Free Food",
@@ -193,7 +193,7 @@ export default function HomePage() {
        
             
         {/* Center: Feed */}
-        <div className="w-full lg:flex-1 overflow-y-auto lg:h-[calc(100vh-6rem)]">
+        <div className="w-full lg:flex-1">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-3">
             <h4 className="text-lg font-semibold">The Feed 🌟</h4>
             <Button className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-sm lg:text-base font-semibold px-4 lg:px-5 py-2 rounded-full shadow-none">
