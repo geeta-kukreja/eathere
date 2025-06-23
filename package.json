@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "build:gh": "NEXT_PUBLIC_BASE_PATH=/eathere npm run build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

@@ -6,6 +6,8 @@ import { Card, CardContent } from "../components/ui/Card";
 import { ChevronLeft, ChevronRight, Search, Heart, Plus } from "lucide-react";
 import { Footer } from "../components/Footer";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function HomePage() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -44,7 +46,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center py-16 bg-cover bg-center" style={{ backgroundImage: "url('/food-bg.webp')" }}>
+      <section className="flex flex-col items-center justify-center text-center py-16 bg-cover bg-center" style={{ backgroundImage: `url('${basePath}/food-bg.webp')` }}>
         <h2 className="text-4xl font-bold mb-2 text-white">Plan your next meal!</h2>
         <div className="flex gap-4 mt-6">
           <Button className="bg-white text-orange-600 hover:bg-orange-100">Log In</Button>
@@ -56,7 +58,7 @@ export default function HomePage() {
        <section className="py-12 px-4 bg-gray-100">
         <div className="max-w-screen-xl mx-auto">
           <div className="flex items-center gap-2 mb-8">
-            <img src="/icons/discover.png" style={{ filter: 'invert(41%) sepia(99%) saturate(749%) hue-rotate(359deg) brightness(102%) contrast(101%)' }} alt="Discover" className="w-6 h-6" />
+            <img src={`${basePath}/icons/discover.png`} style={{ filter: 'invert(41%) sepia(99%) saturate(749%) hue-rotate(359deg) brightness(102%) contrast(101%)' }} alt="Discover" className="w-6 h-6" />
             <h3 className="text-2xl font-extrabold text-black">Discover Your City</h3>
           </div>
 
@@ -86,7 +88,7 @@ export default function HomePage() {
                   className="group min-w-[180px] max-w-[200px] h-60 rounded-2xl overflow-hidden relative flex-shrink-0"
                 >
                   <img
-                    src="/cities/indianapolis.jpg"
+                    src={`${basePath}/cities/indianapolis.jpg`}
                     alt={city.name}
                     className="w-full h-full object-cover rounded-2xl"
                   />
@@ -113,7 +115,7 @@ export default function HomePage() {
         {/* Left: Explore Topics */}
         <aside className="w-full md:w-64 bg-white md:pl-6 mb-8 md:mb-0 md:sticky md:top-24 flex flex-col h-fit md:h-[calc(100vh-7rem)]">
           <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
-            <img src="/icons/explore.png" alt="Explore" className="w-5 h-5" style={{ filter: 'invert(41%) sepia(99%) saturate(749%) hue-rotate(359deg) brightness(102%) contrast(101%)' }} />
+            <img src={`${basePath}/icons/explore.png`} alt="Explore" className="w-5 h-5" style={{ filter: 'invert(41%) sepia(99%) saturate(749%) hue-rotate(359deg) brightness(102%) contrast(101%)' }} />
             Explore Topics
           </h4>
           <ul className="space-y-3 overflow-y-auto max-h-[calc(80vh-250px)] pr-1 text-base">
@@ -160,7 +162,7 @@ export default function HomePage() {
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, idx, arr) => (
             <React.Fragment key={idx}>
               <div className="flex flex-col md:flex-row bg-white rounded-xl p-0 max-w-2xl mx-auto">
-                <img src="/cities/indianapolis.jpg" alt="feed" className="w-full md:w-60 h-40 object-cover rounded-xl" />
+                <img src={`${basePath}/cities/indianapolis.jpg`} alt="feed" className="w-full md:w-60 h-40 object-cover rounded-xl" />
                 <div className="flex flex-col flex-1 px-6 pt-4 pb-3 md:pl-6 md:pt-0 md:pb-0 relative">
                   <h5 className="text-2xl font-extrabold leading-snug mb-2">Chicken & Beer Festival – Indianapolis Celebrates 5th Anniversary This October</h5>
                   <span className="text-xs px-3 py-0.5 rounded-full border border-gray-300 mt-1 mb-3 inline-block font-medium">Indianapolis</span>
@@ -185,7 +187,7 @@ export default function HomePage() {
 
         {/* Right: Premium Member */}
         <aside className="w-full md:w-72 mt-8 md:mt-0 md:sticky md:top-24">
-          <img src="/ads/premium.png" alt="Premium Member" className="rounded-lg shadow-lg w-56 mx-auto" />
+          <img src={`${basePath}/ads/premium.png`} alt="Premium Member" className="rounded-lg shadow-lg w-56 mx-auto" />
         </aside>
       </section>
 

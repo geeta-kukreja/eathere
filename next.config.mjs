@@ -2,5 +2,5 @@
 export default {
   output: 'export',
   basePath: '/eathere',
-  assetPrefix: '/eathere',
+  assetPrefix: '/eathere/',
 };
