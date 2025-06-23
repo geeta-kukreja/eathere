@@ -25,11 +25,37 @@ body {
   color: var(--foreground);
   font-family: 'Fredoka', sans-serif;
 }
+
+/* Scrollbar utilities */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Mobile touch scrolling */
+.scroll-smooth {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  /* Improve touch targets */
+  button, a, input {
+    min-height: 44px;
+  }
+  
+  /* Better text sizing for mobile */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
 }
 
