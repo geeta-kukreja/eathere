@@ -6,7 +6,7 @@ import { Card, CardContent } from "../components/ui/Card";
 import { ChevronLeft, ChevronRight, Search, Heart, Plus } from "lucide-react";
 import { Footer } from "../components/Footer";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/eathere';
+const basePath = '';
 
 export default function HomePage() {
   const scrollRef = useRef<HTMLDivElement>(null);
