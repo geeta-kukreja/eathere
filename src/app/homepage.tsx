@@ -74,13 +74,13 @@ export default function HomePage() {
           </div>
 
           <div className="relative flex items-center">
-            {/* Desktop scroll buttons */}
+            {/* Left Arrow - styled like in the reference image */}
             <button
               onClick={scrollLeft}
-              className="hidden lg:block absolute left-[-56px] top-1/2 -translate-y-1/2 z-10 bg-gray-100 rounded-full w-12 h-12 flex items-center justify-center shadow hover:bg-gray-200 transition"
+              className="hidden lg:flex absolute left-[-24px] top-1/2 -translate-y-1/2 z-10 bg-white rounded-full w-10 h-10 items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-200"
               aria-label="Scroll left"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={20} className="text-gray-600" />
             </button>
             
             <div
@@ -89,21 +89,25 @@ export default function HomePage() {
               style={{ scrollBehavior: 'smooth' }}
             >
               {[
-                { name: "Indianapolis, IN" },
-                { name: "Atlanta, GA" },
-                { name: "Boise, ID" },
-                { name: "Boston, MA" },
-                { name: "Charleston, SC" },
-                { name: "Charlotte, NC" }
+                { name: "Indianapolis, IN", image: "indianapolis.jpg" },
+                { name: "Atlanta, GA", image: "atlanta.jpg" },
+                { name: "Boise, ID", image: "boise.jpg" },
+                { name: "Boston, MA", image: "boston.jpg" },
+                { name: "Charleston, SC", image: "charleston.jpg" },
+                { name: "Charlotte, NC", image: "charlotte.jpg" }
               ].map((city, idx) => (
                 <div
                   key={city.name}
                   className="group min-w-[140px] lg:min-w-[180px] max-w-[160px] lg:max-w-[200px] h-48 lg:h-60 rounded-2xl overflow-hidden relative flex-shrink-0"
                 >
                   <img
-                    src={`${basePath}/cities/indianapolis.jpg`}
+                    src={`${basePath}/cities/${city.image}`}
                     alt={city.name}
                     className="w-full h-full object-cover rounded-2xl"
+                    onError={(e) => {
+                      // Fallback to indianapolis.jpg if image doesn't exist
+                      e.currentTarget.src = `${basePath}/cities/indianapolis.jpg`;
+                    }}
                   />
                   {/* Orange overlay on hover for all cards */}
                   <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-70 mix-blend-multiply pointer-events-none rounded-2xl transition-opacity duration-200" />
@@ -114,12 +118,13 @@ export default function HomePage() {
               ))}
             </div>
             
+            {/* Right Arrow - styled like in the reference image */}
             <button
               onClick={scrollRight}
-              className="hidden lg:block absolute right-[-56px] top-1/2 -translate-y-1/2 z-10 bg-gray-100 rounded-full w-12 h-12 flex items-center justify-center shadow hover:bg-gray-200 transition"
+              className="hidden lg:flex absolute right-[-24px] top-1/2 -translate-y-1/2 z-10 bg-white rounded-full w-10 h-10 items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-200"
               aria-label="Scroll right"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={20} className="text-gray-600" />
             </button>
           </div>
           
