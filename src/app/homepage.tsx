@@ -56,7 +56,7 @@ export default function HomePage() {
        <section className="py-12 px-4 bg-gray-100">
         <div className="max-w-screen-xl mx-auto">
           <div className="flex items-center gap-2 mb-8">
-            <img src="/icons/utensils.svg" alt="" aria-hidden="true" className="w-6 h-6 text-orange-500" style={{ filter: 'invert(41%) sepia(99%) saturate(749%) hue-rotate(359deg) brightness(102%) contrast(101%)' }} />
+            <img src="/icons/discover.png" style={{ filter: 'invert(41%) sepia(99%) saturate(749%) hue-rotate(359deg) brightness(102%) contrast(101%)' }} alt="Discover" className="w-6 h-6" />
             <h3 className="text-2xl font-extrabold text-black">Discover Your City</h3>
           </div>
 
@@ -113,7 +113,7 @@ export default function HomePage() {
         {/* Left: Explore Topics */}
         <aside className="w-full md:w-64 bg-white md:pl-6 mb-8 md:mb-0 md:sticky md:top-24 flex flex-col h-fit md:h-[calc(100vh-7rem)]">
           <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
-            <img src="/icons/explore.svg" alt="Explore" className="w-5 h-5" />
+            <img src="/icons/explore.png" alt="Explore" className="w-5 h-5" style={{ filter: 'invert(41%) sepia(99%) saturate(749%) hue-rotate(359deg) brightness(102%) contrast(101%)' }} />
             Explore Topics
           </h4>
           <ul className="space-y-3 overflow-y-auto max-h-[calc(80vh-250px)] pr-1 text-base">
