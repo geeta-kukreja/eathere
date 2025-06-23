@@ -59,7 +59,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center py-12 lg:py-16 bg-cover bg-center px-4" style={{ backgroundImage: `url('${basePath}/food-bg.webp')` }}>
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 text-white">Plan your next meal!</h2>
-        <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mt-6 w-full max-w-xs sm:max-w-none">
+        <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mt-6 w-full max-w-xs sm:max-w-none lg:justify-center lg:max-w-md">
           <Button className="bg-white text-orange-600 hover:bg-orange-100 px-6 py-3">Log In</Button>
           <Button className="bg-orange-600 text-white hover:bg-orange-700 px-6 py-3">Sign Up</Button>
         </div>
@@ -200,7 +200,7 @@ export default function HomePage() {
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, idx, arr) => (
             <React.Fragment key={idx}>
               <div className="flex flex-col lg:flex-row bg-white rounded-xl p-0 max-w-2xl mx-auto">
-                <img src={`${basePath}/cities/indianapolis.jpg`} alt="feed" className="w-full lg:w-60 h-48 lg:h-40 object-cover rounded-t-xl lg:rounded-xl lg:rounded-r-none" />
+                <img src={`${basePath}/cities/indianapolis.jpg`} alt="feed" className="w-full lg:w-60 h-48 lg:h-40 object-cover rounded-t-xl lg:rounded-xl" />
                 <div className="flex flex-col flex-1 px-4 lg:px-6 pt-4 pb-3 lg:pt-0 lg:pb-0 relative">
                   <h5 className="text-lg lg:text-2xl font-extrabold leading-snug mb-2">Chicken & Beer Festival – Indianapolis Celebrates 5th Anniversary This October</h5>
                   <span className="text-xs px-3 py-0.5 rounded-full border border-gray-300 mt-1 mb-3 inline-block font-medium w-fit">Indianapolis</span>
